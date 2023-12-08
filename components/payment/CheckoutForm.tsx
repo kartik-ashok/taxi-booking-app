@@ -30,7 +30,7 @@ function CheckoutForm() {
 
     const secretKey = await res.json();
     //const {client_secret:clientserete}=await res.json();
-    console.log(secretKey);
+    // console.log(secretKey);
     const { error } = await stripe.confirmPayment({
       clientSecret: secretKey,
       elements,
@@ -41,8 +41,8 @@ function CheckoutForm() {
   };
 
   return (
-    <div className="flex flex-col justify-cente pl-8 m-auto ml-[500px] mt-[40px] w-full">
-      <form onSubmit={handleSubmit} className="max-w-md text-white">
+    <div className=" ;g:flex sm:justify-cente pl-8 m-auto sm:items-center mt-[40px] w-full lg:ml-[500px] ">
+      <form onSubmit={handleSubmit} className="max-w-md">
         <PaymentElement className="text-white" />
         <button
           type="submit"
