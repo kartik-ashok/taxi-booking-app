@@ -15,6 +15,7 @@ function MapBoxRoute(props: any) {
       data={{
         type: "Feature",
         geometry: { type: "LineString", coordinates: props.coordinates },
+        properties: {},
       }}
     >
       <Layer
